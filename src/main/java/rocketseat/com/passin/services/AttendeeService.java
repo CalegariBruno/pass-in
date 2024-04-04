@@ -1,5 +1,6 @@
 package rocketseat.com.passin.services;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import rocketseat.com.passin.domain.attendee.Attendee;
 import rocketseat.com.passin.domain.ckeckin.Checkin;
@@ -13,9 +14,10 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
 public class AttendeeService {
-    private AttendeeRepository attendeeRepository;
-    private CheckinRepository checkinRepository;
+    private final AttendeeRepository attendeeRepository;
+    private final CheckinRepository checkinRepository;
 
     public List<Attendee> getAllAttendeesFromEvent(String eventId){
         return this.attendeeRepository.findByEventId(eventId);
