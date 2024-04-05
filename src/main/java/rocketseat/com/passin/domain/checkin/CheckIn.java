@@ -1,4 +1,4 @@
-package rocketseat.com.passin.domain.ckeckin;
+package rocketseat.com.passin.domain.checkin;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Checkin {
+public class CheckIn {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
